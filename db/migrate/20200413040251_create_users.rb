@@ -5,7 +5,7 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.string :email, null: false
       t.string :title
       t.string :phone_number, null: false
-      t.integer :status, null: false, default: 1
+      t.string :status, null: false, default: "inactive"
 
       t.timestamps
     end

@@ -20,12 +20,6 @@
     = f.text_field :phone_number
   .field
     = f.label :status
-    = f.number_field :status
-  .field
-    = f.label :created_at
-    = f.datetime_select :created_at
-  .field
-    = f.label :updated_at
-    = f.datetime_select :updated_at
+    = f.text_field :status
   .actions
     = f.submit 'Save'
