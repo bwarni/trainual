@@ -1,0 +1,54 @@
+@import 'bootstrap/dist/css/bootstrap';
+@import '@fortawesome/fontawesome-free';
+
+// .navbar {
+//   background-color:#482D8C !important;
+// }
+
+ #logo {
+  color: #482D8C !important;
+}
+
+.nav-link{
+  color: #282B30 !important;
+}
+
+.nav-link:hover{
+  color: #482D8C !important;
+}
+
+.btn-outline-success{
+  color: #fff !important;
+  background-color: #482D8C !important;
+  border-color: #342165 !important;
+}
+
+
+.btn-outline-success:hover{
+  color: #fff !important;
+  background: #342165 !important;;
+  border-color: #342165 !important;;
+}
+
+
+#logo {
+  float: left;
+  font-size: 1.5em;
+
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+.users {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 100%;
+}
+
+#users-table {
+  flex-grow: 1;
+}
+
+
