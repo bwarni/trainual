@@ -26,6 +26,8 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
 
+    phone_number = PhonyRails.normalize_number(user_params[:phone_number])
+
     respond_to do |format|
       if @user.save
         format.html { redirect_to @user, notice: 'User was successfully created.' }

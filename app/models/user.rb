@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  phony_normalize :phone_number
+  phony_normalize :phone_number, default_country_code: 'US'
 
   STATUSES = { active: 'active', inactive: 'inactive'}.freeze
   enum status: STATUSES
