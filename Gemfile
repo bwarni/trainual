@@ -24,7 +24,10 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
+gem 'haml'
 gem "haml-rails", "~> 2.0"
+gem 'phony_rails', '~> 0.14.6'
+gem 'bootstrap', '~> 4.4.1'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
