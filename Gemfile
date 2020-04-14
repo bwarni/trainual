@@ -30,7 +30,6 @@ gem 'phony_rails', '~> 0.14.6'
 gem 'bootstrap', '~> 4.4.1'
 gem 'faker'
 gem 'jquery-rails'
-gem 'render_async'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
