@@ -1,29 +1,23 @@
 %div.users
   %h1 Listing users
+  = link_to 'Add User', new_user_path, remote: true, class: 'btn btn-outline-success my-2 my-sm-0'
 
-  %table#users-table.table.table-striped.table-bordered.dataTable
+  %table#users-table.table.table-striped.table-bordered.dataTable{"data-order" => "[[ 0, \"desc\" ],[ 1, \"asc\" ], [ 2, \"asc\" ],[ 3, \"asc\" ],[ 4, \"asc\" ],[ 5, \"desc\" ]]", "data-page-length" => "25"}
     %thead
       %tr
-        %th.sorting Name
+        %th Updated At
+        %th Name
         %th Email
         %th Title
         %th Phone number
         %th Status
         %th
         %th
-        %th
 
-    %tbody
+    %tbody#users
       - @users.each do |user|
-        %tr
-          %td= user.name
-          %td= user.email
-          %td= user.title
-          %td= user.phone_number
-          %td= user.status
-          %td= link_to 'Show', user
-          %td= link_to 'Edit', edit_user_path(user)
-          %td= link_to 'Delete', user, method: :delete, data: { confirm: 'Are you sure?' }
+        = render partial: 'table_row', locals: {user: user}
+
 
   %br
   :javascript
@@ -31,5 +25,6 @@
       $('#users-table').DataTable();
     });
 
+= render 'dialog'
 
-= link_to 'New User', new_user_path
+

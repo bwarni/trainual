@@ -1,0 +1,2 @@
+$('#dialog').modal('toggle');
+$('#user_<%= @user.id %>').replaceWith('<%= j render partial: 'table_row', locals: {user: @user} %>')
