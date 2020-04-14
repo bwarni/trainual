@@ -19,14 +19,11 @@ require('datatables.net-bs4')
 
 import "bootstrap";
 import "../stylesheets/application";
-
-
 import $ from 'jquery';
 global.$ = jQuery;
-import "./custom";
 
+// TODO: Figure out why this isnt catching errors
 $(document).ajaxError(function (event, xhr, options, exc) {
-
   var errors = JSON.parse(xhr.responseText);
   var er = "<ul>";
   for (var i = 0; i < errors.length; i++) {
@@ -34,6 +31,9 @@ $(document).ajaxError(function (event, xhr, options, exc) {
     er += "<li>" + list + "</li>"
   }
   er += "</ul>"
-  $("#error_explanation").html(er);
-
+  $("#error_explanation").append(er);
 });
+
+
+
+

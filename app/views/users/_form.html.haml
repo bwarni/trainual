@@ -16,7 +16,7 @@
         = f.telephone_field :phone_number, :class => "form-control"
       .form-group
         = f.label :status, :class => "control-label"
-        = select_tag :status, options_for_select(User.statuses.map {|k, v| [k.humanize.capitalize, v]}), :class => "form-control"
+        = f.select :status, options_for_select(User.statuses, :selected => @user.status), :class => "form-control"
       .form-group
         = f.submit  @user.new_record? ? "Create User" : "Update User", :class => "btn btn-primary"
 

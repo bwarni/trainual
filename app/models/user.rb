@@ -3,9 +3,9 @@ class User < ApplicationRecord
 
   STATUSES = { active: 'active', inactive: 'inactive'}.freeze
   enum status: STATUSES
-  validates :phone_number, length: { is: 10 }
-  validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, :on => :create
-
+  validates :phone_number, format: { with: /\+1[0-9]{10}/, message: 'Invalid' }
+  validates_format_of :email,:with => /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/
 
   validates :name, :email, :phone_number, :status, presence: true
+
 end

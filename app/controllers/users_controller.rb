@@ -30,10 +30,11 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.json { render :show, status: :created, location: @user }
+        format.json { head :no_content }
         format.js
       else
-        format.json { render json: @user.errors, status: :unprocessable_entity }
+        format.json { render json: @user.errors.full_messages,
+          status: :unprocessable_entity }
       end
     end
   end
@@ -43,10 +44,11 @@ class UsersController < ApplicationController
   def update
     respond_to do |format|
       if @user.update(user_params)
-        format.json { render :show, status: :ok, location: @user }
+        format.json { head :no_content }
         format.js
       else
-        format.json { render json: @user.errors, status: :unprocessable_entity }
+        format.json { render json: @user.errors.full_messages,
+          status: :unprocessable_entity }
       end
     end
   end

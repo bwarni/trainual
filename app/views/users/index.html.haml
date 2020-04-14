@@ -1,7 +1,5 @@
 %div.users
   %h1 Listing users
-  = link_to 'Add User', new_user_path, remote: true, class: 'btn btn-outline-success my-2 my-sm-0'
-
   %table#users-table.table.table-striped.table-bordered.dataTable{"data-order" => "[[ 0, \"desc\" ],[ 1, \"asc\" ], [ 2, \"asc\" ],[ 3, \"asc\" ],[ 4, \"asc\" ],[ 5, \"desc\" ]]", "data-page-length" => "25"}
     %thead
       %tr

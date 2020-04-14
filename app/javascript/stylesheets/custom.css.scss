@@ -1,9 +1,6 @@
 @import 'bootstrap/dist/css/bootstrap';
 @import '@fortawesome/fontawesome-free';
 
-// .navbar {
-//   background-color:#482D8C !important;
-// }
 
  #logo {
   color: #482D8C !important;
@@ -21,6 +18,13 @@
   color: #fff !important;
   background-color: #482D8C !important;
   border-color: #342165 !important;
+}
+.btn-outline-success a {
+  color: #fff !important;
+}
+.btn-outline-success a:hover {
+  color: #fff !important;
+  text-decoration: none;
 }
 
 
